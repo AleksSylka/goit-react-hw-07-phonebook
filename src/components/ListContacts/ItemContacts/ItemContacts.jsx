@@ -9,8 +9,8 @@ export const ItemContactBlock = ({ name, phone, id }) => {
     const dispatch = useDispatch();
     
     const handleDelete = event => {
-        /* event.preventDefault(); */
-        dispatch(deleteContact(event.currentTarget.value))
+        event.preventDefault();
+        dispatch(deleteContact(event.currentTarget.value));
     }
     return (
         <>
