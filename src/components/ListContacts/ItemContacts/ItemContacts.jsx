@@ -9,7 +9,6 @@ export const ItemContactBlock = ({ name, phone, id }) => {
     const dispatch = useDispatch();
     
     const handleDelete = event => {
-        event.preventDefault();
         dispatch(deleteContact(event.currentTarget.value));
     }
     return (
@@ -17,7 +16,7 @@ export const ItemContactBlock = ({ name, phone, id }) => {
                 <ItemContact>
                     <ItemText><b>{name}</b></ItemText>
                     <ItemText><AiOutlinePhone />{phone}</ItemText>
-                    <ButtonDelete type="submit" onClick={handleDelete} value={id}><AiFillDelete/></ButtonDelete>
+                    <ButtonDelete type="button" onClick={handleDelete} value={id}><AiFillDelete/></ButtonDelete>
                 </ItemContact>
         </>
     )
